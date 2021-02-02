@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Demo Examples</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>#source {
+  color: white;
+  background: green;
+  padding: 4px 8px;
+}
+
+#destination {
+  color: white;
+  background: red;
+  padding: 4px 8px;
+}
+
+button {
+  margin-top: 20px;
+}
+#para>span{
+display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	text-transform: capitalize;
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="dropdown">
+		<span  class="dropdown-toggle" id="para" data-toggle="dropdown">
+			<button type="button" class="btn btn-primary">More</button>
+		</span>
+		<div class="dropdown-menu">
+			<a class="dropdown-item btn btn-info" onclick="changeColor('info');">info</a>
+			<a class="dropdown-item btn btn-primary" onclick="changeColor('primary');">primary</a>
+			<a class="dropdown-item btn btn-warning" onclick="changeColor('warning');">warning</a>
+			<a class="dropdown-item btn btn-success" onclick="changeColor('success');">success</a>
+			<a class="dropdown-item btn-danger" onclick="changeColor('danger');">danger</a>		
+			<a class="dropdown-item btn-secondary" onclick="changeColor('secondary');">secondary</a>
+		  </div>
+		</div>
+				
+	</div>
+	<script>
+	function changeColor(newColor) {
+	var elem = document.getElementById('para');
+	var x = '<span class=btn-'+ newColor +'>'+ newColor + '</span>';
+	elem.innerHTML = x;
+	}
+	
+	//While loop
+	/*
+	$('.btn').click(function(){
+		var x = $("#test").html();
+    console.log(x);
+	
+			var a = $('.btn').html();
+			console.log(a);
+			var node1 = document.getElementById("demo");
+			var textnode = document.createTextNode(a);
+		node1.appendChild(textnode);
+			
+		});
+		<!-- var cha = 'A'.charCodeAt(0);
+	var chz = 'Z'.charCodeAt(0);
+	while(cha<=chz){
+		var alpha = String.fromCharCode(cha);
+		var node = document.createElement("span");
+		console.log(node);
+		var textnode = document.createTextNode(alpha);
+		node.appendChild(textnode);
+		
+		document.getElementById("demo").appendChild(node);
+		
+		cha++;
+	}
+*/
+	</script>
+</body>
+</html>
